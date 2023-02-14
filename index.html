@@ -15,56 +15,315 @@
 <body>
     <header>
         <div class="container">
-
             <nav class="navbar navbar-expand-lg ">
                 <a class="navbar-brand" href="#">
-                    <img src="https://kungfutech.edu.vn/_nuxt/img/logo-kungfutech.8162f19.svg" alt="">
+                    <img src="./img/logo-kungfutech.8162f19.svg" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button id="showNavReponsive" class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <form class="form-inline my-2 my-lg-0 headerForm">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNyAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjE0OTggMTFIMTEuMzgxOUwxMS4xMDk4IDEwLjczQzEyLjA2MjMgOS41OSAxMi42MzU4IDguMTEgMTIuNjM1OCA2LjVDMTIuNjM1OCAyLjkxIDkuODA3MzIgMCA2LjMxNzkgMEMyLjgyODQ3IDAgMCAyLjkxIDAgNi41QzAgMTAuMDkgMi44Mjg0NyAxMyA2LjMxNzkgMTNDNy44ODI3OSAxMyA5LjMyMTMzIDEyLjQxIDEwLjQyOTQgMTEuNDNMMTAuNjkxOCAxMS43MVYxMi41TDE1LjU1MTcgMTcuNDlMMTcgMTZMMTIuMTQ5OCAxMVpNNi4zMTc5IDExQzMuODk3NjYgMTEgMS45NDM5NyA4Ljk5IDEuOTQzOTcgNi41QzEuOTQzOTcgNC4wMSAzLjg5NzY2IDIgNi4zMTc5IDJDOC43MzgxNCAyIDEwLjY5MTggNC4wMSAxMC42OTE4IDYuNUMxMC42OTE4IDguOTkgOC43MzgxNCAxMSA2LjMxNzkgMTFaIiBmaWxsPSIjNjA2NzcwIiBmaWxsLW9wYWNpdHk9IjAuODciLz4KPC9zdmc+Cg=="
-                            alt="Tìm Kiếm">
+                        <img src="./img/searchLogo.svg" alt="Tìm Kiếm">
                         <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
                     </form>
                     <ul class=" navbar-nav m-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Khóa học</a>
-                        </li>
                         <li class="nav-item">
+                            <a id="khoaHoc" class="nav-link" href="#">
+                                Khóa học
+                            </a>
+                        </li>
+                        <li id="taiNguyen" class="nav-item">
                             <a class="nav-link" href="#">Tài nguyên</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item ">
                             <a class="nav-link" href="#">Công đồng</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Youtube</a>
                         </li>
 
                     </ul>
                     <span>
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAYAAABIB77kAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHDSURBVHgBvZU7SCtBFIb/mWyicfOSe69RvJdrYREwooKldlaKoI29llbaib0gQbCxT2erVjZ2lha+IeAT38ZEgjHmMdkZZ7YQfGB2JPo1y55h5z/7nzNzCCSRqamW3suLeFMu2+m2rBCqSM7twU5DePk4EJxMzM6eEiU2ur+9OZzYq6rQW5Yi0Uy8raPLaH14mP9uMYXSOAz9itNo8mYImtAAB/Vz6NIoS0ZNVoIuvr48zJ48dPHI/jDwBfwDTxCcILtqQhdtQVIrUNdTgCgQUC8Hz1Ot7ysLEul97B5Gc9l+pT5ux4hX4O9i8kWwlPAgNR8Az36eQOX0BHA7XY/8Ri283UXURNjLUk0bs2OFPSkWC1YUUziyVDCCtMyenRgIx9Kv1q7GfyO35oVTtArAC+9jogwttARNeRyELOHdTD1Sc0Hbbn//k84WzruUmgKe/2WcDTaidOC2Y4+rdWhaSNlNpMSrKqiOw+XYn1eNwc4NnI+E4QpyWBlnZhnM5crIZ8W71Ep/vKEoElhFAieoyUGvTd8WfojdcMMKXW/+N7oUac/gm1Hj6cgfmrC9UDNRjalo8nrIZAzVRJVMuah+TA3gZ94Xo+2rNxQSAAAAAElFTkSuQmCC"
-                            alt="">
+                        <img src="./img/logoVN.png" alt="">
                     </span>
                 </div>
             </nav>
         </div>
+        <div class="navItem-dropdown" id="khoaHocDropdown">
+            <div class="navItem-dropdownContent">
+                <a href="#">
+                    <div class="item">
+                        <img src="./img/logo-java.f62ce57.png" alt="">
+                        <div class="item-content">
+                            <h3>Java</h3>
+                            <h4>Khóa học Java nền tảng</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="item">
+                        <img src="./img/logo-javascript.7d61910.png" alt="">
+                        <div class="item-content">
+                            <h3>Javascript</h3>
+                            <h4>Khóa học Javascript</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="item">
+                        <img src="./img/logo-aws.3de16ee.png" alt="">
+                        <div class="item-content">
+                            <h3>AWS</h3>
+                            <h4>Khóa học Cloud cơ bản</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="item">
+                        <img src="./img/logo-spring-boot.b62c64a.png" alt="">
+                        <div class="item-content">
+                            <h3>Spring Boot</h3>
+                            <h4>Khóa học Spring Boot</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="item">
+                        <img src="./img/logoDoc.png" alt="">
+                        <div class="item-content">
+                            <h3>Docker</h3>
+                            <h4>Khóa học Docker cơ bản</h4>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="item">
+                        <img src="./img/logo-c.749f796.png" alt="">
+                        <div class="item-content">
+                            <h3>C</h3>
+                            <h4>Khóa học C nền tảng</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="navItem-dropdownTN" id="taiNguyenDrop">
+            <div class="navItemContent-dropdownTN">
+                <div class="firstContent">
+                    <a href="#">
+                        <h3>
+                            Câu hỏi phỏng vấn
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Javascript
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Java
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            React.js
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            HTML
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            CSS
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Typescript
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Python
+                        </h3>
+                    </a>
+                    <a class="text-button" href="#">
+                        <button>
+                            Xem thêm
+                        </button>
+                    </a>
+                </div>
+                <div class="secondContent">
+                    <a href="#">
+                        <h3>
+                            Tài liệu lập trình
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Javascript
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            Java
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            HTML
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            CSS
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            NodeJs
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            ReactJs
+                        </h3>
+                    </a>
+                    <a href="#">
+                        <h3>
+                            VueJs
+                        </h3>
+                    </a>
+                    <a class="text-button" href="#">
+                        <button>
+                            Xem thêm
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbarReponsive navbar-collapse" id="navReponsive">
+            <div class="navReponsive-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo-kungfutech.8162f19.svg" alt="">
+                </a>
+                <div class="close-icone">
+                    <button id="closeNavRes" type="button">
+                        <span>&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="navReponsive-content">
+                <form class="form-inline my-2 my-lg-0 headerFormNavRes">
+                    <img src="./img/searchLogo.svg" alt="Tìm Kiếm">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                    <button type="button">Tìm kiếm</button>
+                </form>
+                <ul class=" navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navItemDropMenu" data-toggle="collapse" data-target="#dropMenu" aria-controls="dropMenu"
+                            aria-expanded="false" aria-label="Toggle navigation" class="nav-link active" href="#">
+                            Khóa học
+                            <button id="buttonDropMenu" class="navbar-toggler" type="button">
+                                <span class="dropMenuIcon"></span>
+                            </button>
+                        </a>
+                        <div class="dropMenu">
+                            <div class="collapse navbar-collapse" id="dropMenu">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Java</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Javascript</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">AWS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Spring Boot</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Docket</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">C</a>
+                                    </li>
+                                    <a class="text-button" href="#">
+                                        <button>
+                                            Xem thêm
+                                        </button>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="navItemDropMenuTN" data-toggle="collapse" data-target="#dropMenuTN"
+                            aria-controls="dropMenuTN" aria-expanded="false" aria-label="Toggle navigation"
+                            class="nav-link active" href="#">
+                            Tài Nguyên
+                            <button id="buttonDropMenuTN" class="navbar-toggler" type="button">
+                                <span class="dropMenuIcon"></span>
+                            </button>
+                        </a>
+                        <div class="dropMenu">
+                            <div class="collapse navbar-collapse" id="dropMenuTN">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Câu hỏi phỏng vấn</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tài liệu lập trình</a>
+                                    </li>
+                                    <a class="text-button" href="#">
+                                        <button>
+                                            Xem thêm
+                                        </button>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Công đồng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Youtube</a>
+                    </li>
+
+                </ul>
+                <span>
+                    <img src="./img/logoVN.png" alt="">
+                </span>
+            </div>
+        </div>
     </header>
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleCaptions" class="carousel-body carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto/v1638635550/assets/home-slide_cl6hzu.svg"
-                    class="d-block w-100" alt="...">
+        <div class="carousel-inner carouselBody-inner">
+            <div class="carouselBody-item carousel-item active">
+                <img src="./img/imge1.webp" class="d-block img-fluid w-100" alt="...">
                 <div class="carouselItem-content">
                     <h2>
                         Nơi công nghệ giúp bạn có một cuộc sống tốt đẹp hơn
@@ -74,15 +333,12 @@
                     </p>
                     <button>
                         KHÁM PHÁ NGAY
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMyAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuODQwNTk2IDcuODMzMzhMMTAuMTQ4OSA3LjgzMzM4TDYuMDgyMjYgMTEuOUM1Ljc1NzI2IDEyLjIyNSA1Ljc1NzI2IDEyLjc1ODQgNi4wODIyNiAxMy4wODM0QzYuNDA3MjYgMTMuNDA4NCA2LjkzMjI2IDEzLjQwODQgNy4yNTcyNiAxMy4wODM0TDEyLjc0ODkgNy41OTE3MUMxMy4wNzM5IDcuMjY2NzEgMTMuMDczOSA2Ljc0MTcxIDEyLjc0ODkgNi40MTY3MUw3LjI2NTYgMC45MTY3MTJDNy4xMDk5IDAuNzYwNjY4IDYuODk4NTMgMC42NzI5NzQgNi42NzgxIDAuNjcyOTc0QzYuNDU3NjcgMC42NzI5NzQgNi4yNDYyOSAwLjc2MDY2OCA2LjA5MDYgMC45MTY3MTJDNS43NjU2IDEuMjQxNzEgNS43NjU2IDEuNzY2NzEgNi4wOTA2IDIuMDkxNzFMMTAuMTQ4OSA2LjE2NjcxTDAuODQwNTk2IDYuMTY2NzFDMC4zODIyNjMgNi4xNjY3MSAwLjAwNzI2MzE4IDYuNTQxNzEgMC4wMDcyNjMxOCA3LjAwMDA0QzAuMDA3MjYzMTggNy40NTgzOCAwLjM4MjI2MyA3LjgzMzM4IDAuODQwNTk2IDcuODMzMzhaIiBmaWxsPSIjRkZGNkU0Ii8+Cjwvc3ZnPgo="
-                            alt="">
+                        <img src="./img/Arrowimge.svg" alt="">
                     </button>
                 </div>
-
             </div>
-            <div class="carousel-item">
-                <img src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto/v1646986271/assets/Slide2_k2xbxt.svg"
-                    class="d-block w-100" alt="...">
+            <div class="carouselBody-item carousel-item">
+                <img src="./img/imge2.webp" class="d-block img-fluid w-100" alt="...">
                 <div class="carouselItem-content">
                     <h2>
 
@@ -91,35 +347,34 @@
                     </h2>
                     <p>
 
-                        Đăng ký kênh TechMely để cập nhật bản tin công nghệ hàng tuần, các video hướng dẫn,tips & trick
+                        Đăng ký kênh TechMely để cập nhật bản tin công nghệ hàng tuần, các video hướng dẫn,tips &
+                        trick
                         trong lập trình và vô vàn điều thú vị khác...
 
                     </p>
                     <button>
                         KHÁM PHÁ NGAY
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMyAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuODQwNTk2IDcuODMzMzhMMTAuMTQ4OSA3LjgzMzM4TDYuMDgyMjYgMTEuOUM1Ljc1NzI2IDEyLjIyNSA1Ljc1NzI2IDEyLjc1ODQgNi4wODIyNiAxMy4wODM0QzYuNDA3MjYgMTMuNDA4NCA2LjkzMjI2IDEzLjQwODQgNy4yNTcyNiAxMy4wODM0TDEyLjc0ODkgNy41OTE3MUMxMy4wNzM5IDcuMjY2NzEgMTMuMDczOSA2Ljc0MTcxIDEyLjc0ODkgNi40MTY3MUw3LjI2NTYgMC45MTY3MTJDNy4xMDk5IDAuNzYwNjY4IDYuODk4NTMgMC42NzI5NzQgNi42NzgxIDAuNjcyOTc0QzYuNDU3NjcgMC42NzI5NzQgNi4yNDYyOSAwLjc2MDY2OCA2LjA5MDYgMC45MTY3MTJDNS43NjU2IDEuMjQxNzEgNS43NjU2IDEuNzY2NzEgNi4wOTA2IDIuMDkxNzFMMTAuMTQ4OSA2LjE2NjcxTDAuODQwNTk2IDYuMTY2NzFDMC4zODIyNjMgNi4xNjY3MSAwLjAwNzI2MzE4IDYuNTQxNzEgMC4wMDcyNjMxOCA3LjAwMDA0QzAuMDA3MjYzMTggNy40NTgzOCAwLjM4MjI2MyA3LjgzMzM4IDAuODQwNTk2IDcuODMzMzhaIiBmaWxsPSIjRkZGNkU0Ii8+Cjwvc3ZnPgo="
-                            alt="">
+                        <img src="./img/Arrowimge.svg" alt="">
                     </button>
                 </div>
 
             </div>
-            <div class="carousel-item">
-                <img src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto/v1646986271/assets/Slide3_zfnx07.svg"
-                    class="d-block w-100" alt="...">
+            <div class="carouselBody-item carousel-item">
+                <img src="./img/imge3.webp" class="d-block img-fluid w-100" alt="...">
                 <div class="carouselItem-content">
                     <h2>
                         Lập trình không khó - KungFu Tech
                     </h2>
                     <p>
 
-                        Theo dõi fanpage TechMely để cập nhật những bản tin công nghệ mới nhất trong tuần, những chia sẻ
+                        Theo dõi fanpage TechMely để cập nhật những bản tin công nghệ mới nhất trong tuần, những
+                        chia sẻ
                         hay và bổ ích...
 
                     </p>
                     <button>
                         KHÁM PHÁ NGAY
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMyAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuODQwNTk2IDcuODMzMzhMMTAuMTQ4OSA3LjgzMzM4TDYuMDgyMjYgMTEuOUM1Ljc1NzI2IDEyLjIyNSA1Ljc1NzI2IDEyLjc1ODQgNi4wODIyNiAxMy4wODM0QzYuNDA3MjYgMTMuNDA4NCA2LjkzMjI2IDEzLjQwODQgNy4yNTcyNiAxMy4wODM0TDEyLjc0ODkgNy41OTE3MUMxMy4wNzM5IDcuMjY2NzEgMTMuMDczOSA2Ljc0MTcxIDEyLjc0ODkgNi40MTY3MUw3LjI2NTYgMC45MTY3MTJDNy4xMDk5IDAuNzYwNjY4IDYuODk4NTMgMC42NzI5NzQgNi42NzgxIDAuNjcyOTc0QzYuNDU3NjcgMC42NzI5NzQgNi4yNDYyOSAwLjc2MDY2OCA2LjA5MDYgMC45MTY3MTJDNS43NjU2IDEuMjQxNzEgNS43NjU2IDEuNzY2NzEgNi4wOTA2IDIuMDkxNzFMMTAuMTQ4OSA2LjE2NjcxTDAuODQwNTk2IDYuMTY2NzFDMC4zODIyNjMgNi4xNjY3MSAwLjAwNzI2MzE4IDYuNTQxNzEgMC4wMDcyNjMxOCA3LjAwMDA0QzAuMDA3MjYzMTggNy40NTgzOCAwLjM4MjI2MyA3LjgzMzM4IDAuODQwNTk2IDcuODMzMzhaIiBmaWxsPSIjRkZGNkU0Ii8+Cjwvc3ZnPgo="
-                            alt="">
+                        <img src="./img/Arrowimge.svg" alt="">
                     </button>
                 </div>
 
@@ -142,19 +397,16 @@
                         <div class="blogNews-cardItem col-6">
                             <a href="#">
                                 <div>
-                                    <img class="img-fluid"
-                                        src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto,r_30/v1638635611/assets/lo-trinh-tro-thanh-frontend-developer_lvsakb.svg"
-                                        alt="">
+                                    <img class="img-fluid" src="./img/imge4.webp" alt="">
                                 </div>
                             </a>
                             <a class="blogNews-title" href="#">
-                                Lộ trình trở thành một Front-end developer và tài liệu học tập
+                                <h3> Lộ trình trở thành một Front-end developer và tài liệu học tập</h3>
                             </a>
-                            <p class="blogNews-description">
+                            <h4 class="blogNews-description">
                                 Bạn muốn trở thành một Frontend nhưng không biết bắt đầu từ đâu và cũng không có tài
-                                liệu để học tập? Bạn muốn biết lộ trình học tập của một frontend developer như thế nào
-                                thì bài viết này sẽ chia sẻ tất cả với bạn.
-                            </p>
+                                liệu để học tập? Bạn muốn biết lộ trình học tập của một ...
+                            </h4>
                             <a class="button-detail" href="#">
                                 <button>Xem chi tiết</button>
                             </a>
@@ -162,19 +414,17 @@
                         <div class="blogNews-cardItem col-6">
                             <a href="#">
                                 <div>
-                                    <img class="img-fluid"
-                                        src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto,r_30/v1646987367/assets/backend_xtihhb.svg"
-                                        alt="">
+                                    <img class="img-fluid" src="./img/imge5.webp" alt="">
                                 </div>
                             </a>
                             <a class="blogNews-title" href="#">
-                                Lộ trình trở thành một Back-end developer và tài liệu học tập
+                                <h3> Lộ trình trở thành một Back-end developer và tài liệu học tập</h3>
                             </a>
-                            <p class="blogNews-description">
-                                Bạn muốn trở thành một Backend nhưng không biết bắt đầu từ đâu và cũng không có tài liệu
-                                để học tập? Bạn muốn biết lộ trình học tập của một backend developer như thế nào thì bài
-                                viết này sẽ chia sẻ tất cả với bạn.
-                            </p>
+                            <h4 class="blogNews-description">
+                                Bạn muốn trở thành một Backend nhưng không biết bắt đầu từ đâu và cũng không có tài
+                                liệu
+                                để học tập? Bạn muốn biết lộ trình học tập của một...
+                            </h4>
                             <a class="button-detail" href="#">
                                 <button>Xem chi tiết</button>
                             </a>
@@ -187,10 +437,11 @@
                             <a class="text-title" href="#">
                                 Kinh nghiệm phỏng vấn từ góc nhìn của người phỏng vấn
                             </a>
-                            <p>Bạn đã bao giờ bước vào một cuộc phỏng vấn mà không biết phải chuẩn bị những gì? Bạn đã
+                            <h4>Bạn đã bao giờ bước vào một cuộc phỏng vấn mà không biết phải chuẩn bị những gì? Bạn
+                                đã
                                 bao
                                 giờ phỏng vấn xong, nghĩ mình trả lời cũng ổn, nhưng...
-                            </p>
+                            </h4>
                             <a class="text-button" href="#">
                                 <button>Xem Chi Tiết</button>
                             </a>
@@ -199,9 +450,10 @@
                             <a class="text-title" href="#">
                                 Làm quen với Machine Learning
                             </a>
-                            <p>Mình là một người đang học và nghiên cứu về Machine Learning. Lĩnh vực mình chuyên sâu
+                            <h4>Mình là một người đang học và nghiên cứu về Machine Learning. Lĩnh vực mình chuyên
+                                sâu
                                 cho đến bây giờ là Natural Language Processing (gọi tắt...
-                            </p>
+                            </h4>
                             <a class="text-button" href="#">
                                 <button>Xem Chi Tiết</button>
                             </a>
@@ -210,9 +462,10 @@
                             <a class="text-title" href="#">
                                 Kinh nghiệm phỏng vấn Google
                             </a>
-                            <p>Trong bài viết này mình muốn chia sẻ kinh nghiệm phỏng vấn Google của mình. Mình tên là
+                            <h4>Trong bài viết này mình muốn chia sẻ kinh nghiệm phỏng vấn Google của mình. Mình tên
+                                là
                                 RR, hiện đang làm Software Engineer ở Google. Trong thời...
-                            </p>
+                            </h4>
                             <a class="text-button" href="#">
                                 <button>Xem Chi Tiết</button>
                             </a>
@@ -224,17 +477,16 @@
                 <div class="col-3">
                     <div class="common-newCard">
                         <a href="#">
-                            <img class="img-fluid"
-                                src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto,r_30/v1638635611/assets/article3_bs6yvh.webp"
-                                alt="">
+                            <img class="img-fluid" src="./img/imge6.webp" alt="">
                         </a>
                         <a class="common-title" href="#">
-                            Bắt đầu Web3.0: lộ trình, hướng dẫn và tài liệu cho developer
-
+                            <h3> Bắt đầu Web3.0: lộ trình, hướng dẫn và tài liệu cho developer
+                            </h3>
                         </a>
-                        <p>
-                            Blockchains vẫn đang là xu hướng và ngành này đang thu hút rất nhiều lập trình viên, b...
-                        </p>
+                        <h4>
+                            Blockchains vẫn đang là xu hướng và ngành này đang thu hút rất nhiều lập trình viên,
+                            b...
+                        </h4>
                         <a class="text-button" href="#">
                             <button>Xem chi tiết</button>
                         </a>
@@ -243,17 +495,16 @@
                 <div class="col-3">
                     <div class="common-newCard">
                         <a href="#">
-                            <img class="img-fluid"
-                                src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto,r_30/v1638635609/assets/article1_dlkgo6.webp"
-                                alt="">
+                            <img class="img-fluid" src="./img/imge7.webp" alt="">
                         </a>
                         <a class="common-title" href="#">
-                            Tài nguyên cho lập trình viên Frontend 2022 ⚡
+                            <h3>Tài nguyên cho lập trình viên Frontend 2022 ⚡
+                            </h3>
 
                         </a>
-                        <p>
+                        <h4>
                             Tổng hợp những tài nguyên dành cho các lập trình viên frontend bao gồm tài liệu họ...
-                        </p>
+                        </h4>
                         <a class="text-button" href="#">
                             <button>Xem chi tiết</button>
                         </a>
@@ -262,16 +513,14 @@
                 <div class="col-3">
                     <div class="common-newCard">
                         <a href="#">
-                            <img class="img-fluid"
-                                src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto,r_30/v1638635610/assets/article2_jhg1xq.webp"
-                                alt="">
+                            <img class="img-fluid" src="./img/imge8.webp" alt="">
                         </a>
                         <a class="common-title" href="#">
-                            Tổng hợp tài liệu học lập trình
+                            <h3> Tổng hợp tài liệu học lập trình</h3>
                         </a>
-                        <p>
+                        <h4>
                             Bài viết tổng hợp một số nguồn tài liệu dành cho các bạn mới muốn học lập trình,
-                        </p>
+                        </h4>
                         <a class="text-button" href="#">
                             <button>Xem chi tiết</button>
                         </a>
@@ -280,396 +529,617 @@
                 <div class="col-3">
                     <div class="common-newCard">
                         <a href="#">
-                            <img class="img-fluid"
-                                src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto,r_30/v1638635611/assets/article4_znqfci.webp"
-                                alt="">
+                            <img class="img-fluid" src="./img/imge9.webp" alt="">
                         </a>
                         <a class="common-title" href="#">
-                            Phỏng vấn ngược
+                            <h3>Phỏng vấn ngược</h3>
                         </a>
-                        <p>
+                        <h4>
                             Dưới đây là danh sách các câu hỏi có thể giúp ích cho bạn trong việc ứng tuyển...
-                        </p>
+                        </h4>
                         <a class="text-button" href="#">
                             <button>Xem chi tiết</button>
                         </a>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="blog-moblie">
+            <div class="blogNews-cardMB">
+                <div id="carouselExampleControls" data-interval="1500" data-pause="false" class="carousel slide"
+                    data-ride="carousel">
+                    <div class="carouselBlog-inner carousel-inner">
+                        <div class="carouselBlog-item carousel-item active">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="common-newCard">
+                                        <a href="#">
+                                            <img class="img-fluid" src="./img/imge4.webp" alt="">
+                                        </a>
+                                        <a class="common-title" href="#">
+                                            <h3> Lộ trình trở thành một Front-end...</h3>
+                                        </a>
+                                        <h4>
+                                            Bạn muốn trở thành một Frontend nhưng không biết bắt đầu từ đâu và...
+                                        </h4>
+                                        <a href="#">
+                                            <button>Xem chi tiết</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="common-newCard">
+                                        <a href="#">
+                                            <img class="img-fluid" src="./img/imge5.webp" alt="">
+                                        </a>
+                                        <a class="common-title" href="#">
+                                            <h3> Lộ trình trở thành một Back-end...</h3>
+                                        </a>
+                                        <h4>
+                                            Bạn muốn trở thành một Frontend nhưng không biết bắt đầu từ đâu và...
+                                        </h4>
+                                        <a href="#">
+                                            <button>Xem chi tiết</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carouselBlog-item carousel-item">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="common-newCard">
+                                        <a href="#">
+                                            <img class="img-fluid" src="./img/imge5.webp" alt="">
+                                        </a>
+                                        <a class="common-title" href="#">
+                                            <h3> Bắt đầu Web3.0: lộ trình, hướng dẫn...
+                                            </h3>
+                                        </a>
+                                        <h4>
+                                            Blockchains vẫn đang là xu hướng và ngành này đang thu hút rất nhiều lập
+                                            trình viên,
+                                            b...
+                                        </h4>
+                                        <a href="#">
+                                            <button>Xem chi tiết</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="common-newCard">
+                                        <a href="#">
+                                            <img class="img-fluid" src="./img/imge6.webp" alt="">
+                                        </a>
+                                        <a class="common-title" href="#">
+                                            <h3> Tài nguyên cho lập trình viên Frote...
+                                            </h3>
+
+                                        </a>
+                                        <h4>
+                                            Tổng hợp những tài nguyên dành cho các lập trình viên frontend bao gồm
+                                            tài
+                                            liệu họ...
+                                        </h4>
+                                        <a href="#">
+                                            <button>Xem chi tiết</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carouselBlog-item carousel-item">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="common-newCard">
+                                        <a href="#">
+                                            <img class="img-fluid" src="./img/imge7.webp" alt="">
+                                        </a>
+                                        <a class="common-title" href="#">
+                                            <h3> Tổng hợp tài liệu học lập trình</h3>
+                                        </a>
+                                        <h4>
+                                            Bài viết tổng hợp một số nguồn tài liệu dành cho các bạn mới muốn học
+                                            lập
+                                            trình,
+                                        </h4>
+                                        <a href="#">
+                                            <button>Xem chi tiết</button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="common-newCard">
+                                        <a href="#">
+                                            <img class="img-fluid" src="./img/imge8.webp" alt="">
+                                        </a>
+                                        <a class="common-title" href="#">
+                                            <h3>Phỏng vấn ngược</h3>
+                                        </a>
+                                        <h4>
+                                            Dưới đây là danh sách các câu hỏi có thể giúp ích cho bạn trong việc ứng
+                                            tuyển...
+                                        </h4>
+                                        <a href="#">
+                                            <button>Xem chi tiết</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
         <section class="trend">
             <div class="row">
-                <div class="col-lg-9 col-md-12 col-sm-12">
+                <div class="col-12 col-lg-9">
                     <div class="trend-header">
-                        <img src="https://res.cloudinary.com/techmely/image/upload/f_webp,q_auto/v1643042367/assets/trend-icon_ltglle.svg"
-                            alt="">
+                        <img src="./img/trend-icon_ltglle.webp" alt="">
                         <span>Xu hướng</span>
                     </div>
                     <div class="row trend-content mt-5">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-trend">
-                                <img src="https://kungfutech.edu.vn/_nuxt/img/1.0f464c4.svg" alt="">
+                                <img src="./img/1.0f464c4.svg" alt="">
                                 <a href="#">
-                                    <p>Lộ trình trở thành một Front-end developer...</p>
-                                    <p>Techmely Team</p>
+                                    <h3>Lộ trình trở thành một Front-end developer...</h3>
+                                    <h4>Techmely Team</h3>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-trend">
-                                <img src="https://kungfutech.edu.vn/_nuxt/img/2.526b813.svg" alt="">
+                                <img src="./img/2.526b813.svg" alt="">
                                 <a href="#">
-                                    <p>Chia sẻ kinh nghiệm phỏng vấn</p>
-                                    <p>Đinh Hoàng Phong</p>
+                                    <h3>Chia sẻ kinh nghiệm phỏng vấn</h3>
+                                    <h4>Đinh Hoàng Phong</h4>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-trend">
-                                <img src="https://kungfutech.edu.vn/_nuxt/img/1.0f464c4.svg" alt="">
+                                <img src="./img/3.3ec2603.svg" alt="">
                                 <a href="#">
-                                    <p>Lộ trình trở thành một Front-end developer...</p>
-                                    <p>Techmely Team</p>
+                                    <h3>Kinh nghiệm phỏng vấn từ góc nhìn của...</h3>
+                                    <h4>Thành Trung</h4>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-trend">
-                                <img src="https://kungfutech.edu.vn/_nuxt/img/1.0f464c4.svg" alt="">
+                                <img src="./img/4.2563a5c.svg" alt="">
                                 <a href="#">
-                                    <p>Lộ trình trở thành một Front-end developer...</p>
-                                    <p>Techmely Team</p>
+                                    <h3>Bắt đầu Web3.0: lộ trình, hướng dẫn và tài...</h3>
+                                    <h4>Techmely Team</h4>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-trend">
-                                <img src="https://kungfutech.edu.vn/_nuxt/img/1.0f464c4.svg" alt="">
+                                <img src="./img/5.ea503d5.svg" alt="">
                                 <a href="#">
-                                    <p>Lộ trình trở thành một Front-end developer...</p>
-                                    <p>Techmely Team</p>
+                                    <h3>33 khái niệm Javascript developer nên biết</h3>
+                                    <h4>Techmely Team</h4>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                             <div class="charts-trend">
-                                <img src="https://kungfutech.edu.vn/_nuxt/img/1.0f464c4.svg" alt="">
+                                <img src="./img/6.ea8ffb9.svg" alt="">
                                 <a href="#">
-                                    <p>Lộ trình trở thành một Front-end developer...</p>
-                                    <p>Techmely Team</p>
+                                    <h3>Tổng hợp tài liệu học lập trình</h3>
+                                    <h4>Techmely Team</h4>
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row trend-cources mt-5">
-                        <div class="col-md-6 col-sm-12 mt-3">
-                            <div class="trend-cources__item position-relative">
-                                <div>
-                                    <a href="#" class="b-block">
-
-                                        <img src="./img/course1.webp" class="rounded w-100" alt="course1">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3 class="text-uppercase font-weight-bold">
-                                        <a href="#">Java cơ bản cho người mới bắt đầu</a>
-                                    </h3>
-                                    <ul class="list-group-flush  trend-cources__list-group">
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                    </ul>
-                                    <a href="#" class="w-100 button">Xem chi tiết khóa học</a>
-                                </div>
-                                <div class="position-absolute">
-                                    <span class="text-uppercase font-weight-bold text-white">Mới</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-12 mt-3">
-                            <div class="trend-cources__item position-relative">
-                                <div>
-                                    <a href="#" class="b-block">
-                                        <img src="./img/course1.webp" class="rounded w-100" alt="course1">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3 class="text-uppercase font-weight-bold">
-                                        <a href="#">Java cơ bản cho người mới bắt đầu</a>
-                                    </h3>
-                                    <ul class="list-group-flush  trend-cources__list-group">
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                        <li class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter"><a href="#">Chương 1: Giới thiệu Java</a></li>
-                                    </ul>
-                                    <a href="#" class="w-100 button">Xem chi tiết khóa học</a>
-                                </div>
-                                <div class="position-absolute">
-                                    <span class="text-uppercase font-weight-bold text-white">Mới</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row trend-question mt-5">
-                        <div class="col-12">
-                            <h3 class="font-weight-bold">Câu hỏi phỏng vấn</h3>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 mt-3">
-                            <div class="trend-question__item">
-                                <div>
-                                    <a href="#" class="d-block">
-                                        <img src="./img/javascript.webp" alt="javascript" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3>
-                                        <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
-                                    </h3>
-                                    <h4 class="font-weight-lighter">
-                                        <a href="#">
-                                            Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
-                                        </a>
-                                    </h4>
-                                    <a href="#" class="button">Xem chi tiết</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 mt-3">
-                            <div class="trend-question__item">
-                                <div>
-                                    <a href="#" class="d-block">
-                                        <img src="./img/javascript.webp" alt="javascript" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3>
-                                        <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
-                                    </h3>
-                                    <h4 class="font-weight-lighter">
-                                        <a href="#">
-                                            Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
-                                        </a>
-                                    </h4>
-                                    <a href="#" class="button">Xem chi tiết</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 mt-3">
-                            <div class="trend-question__item">
-                                <div>
-                                    <a href="#" class="d-block">
-                                        <img src="./img/javascript.webp" alt="javascript" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3>
-                                        <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
-                                    </h3>
-                                    <h4 class="font-weight-lighter">
-                                        <a href="#">
-                                            Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
-                                        </a>
-                                    </h4>
-                                    <a href="#" class="button">Xem chi tiết</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 mt-3">
-                            <div class="trend-question__item">
-                                <div>
-                                    <a href="#" class="d-block">
-                                        <img src="./img/javascript.webp" alt="javascript" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3>
-                                        <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
-                                    </h3>
-                                    <h4 class="font-weight-lighter">
-                                        <a href="#">
-                                            Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
-                                        </a>
-                                    </h4>
-                                    <a href="#" class="button">Xem chi tiết</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 mt-3">
-                            <div class="trend-question__item">
-                                <div>
-                                    <a href="#" class="d-block">
-                                        <img src="./img/javascript.webp" alt="javascript" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3>
-                                        <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
-                                    </h3>
-                                    <h4 class="font-weight-lighter">
-                                        <a href="#">
-                                            Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
-                                        </a>
-                                    </h4>
-                                    <a href="#" class="button">Xem chi tiết</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12 mt-3">
-                            <div class="trend-question__item">
-                                <div>
-                                    <a href="#" class="d-block">
-                                        <img src="./img/javascript.webp" alt="javascript" class="w-100">
-                                    </a>
-                                </div>
-                                <div>
-                                    <h3>
-                                        <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
-                                    </h3>
-                                    <h4 class="font-weight-lighter">
-                                        <a href="#">
-                                            Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
-                                        </a>
-                                    </h4>
-                                    <a href="#" class="button">Xem chi tiết</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row trend-quotes">
-                        <div class="col-md-12 d-none d-sm-none	d-md-none d-lg-block mt-5 mb-5">
-                            <div class="trend-quotes-item position-relative">
-                                <h3 class="font-weight-lighter">
-                                    Nơi công nghệ giúp bạn có một cuộc sống tốt đẹp hơn. Sứ mệnh của TechMely là giúp bạn điều đó.
-                                </h3>
-                                <h4 class="font-weight-lighter">-- Tech Mely Team --</h4>
-                                <div class="position-absolute quotes-item1"><img class="w-100" src="./img/download.svg" alt="quote"></div>
-                                <div class="position-absolute quotes-item2"><img class="w-100" src="./img/download1.svg" alt="quote"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row trend-discover my-3">
-                        <div class="col-12">
-                            <div class="trend-discover__item">
-                                <h3 class="font-weight-bold text-white">Khám phá tin công nghệ mới nhất</h3>
-                                <h4 class="font-weight-lighter text-white">Bạn muốn là người nắm bắt được các bản tin về công nghệ, lập trình nhanh nhất? Hãy đăng ký ngay để cập nhật những case study và xu hướng thiết kế mới nhất!</h4>
-                                <div class="d-flex">
-                                    <input type="text" placeholder="Nhập email của bạn..."> 
-                                    <a href="#" class="button btn--send text-white font-weight-normal d-flex">Gửi</a>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12 col-sm-12">
-                    <div class="siderbar">
-                        <div class="siderbar__interview">
-                            <img class="w-100 rounded" src="./img/interview.webp" alt="interview"> 
-                            <h3 class="font-weight-bold">Chủ đề</h3>
-                            <div class="row">
+                <div class="co-12 col-lg-3">
+                    <div class="trend-right px-2">
+                        <div class="trendRight-content">
+                            <img class="w-100" src="./img/imge10.webp" alt="">
+                            <h3 class="my-4">Chủ đề</h3>
+                            <div class="row list">
                                 <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
+                                    <a class="list-item w-100" href="#">
+                                        <img class="img-fluid w-100" src="./img/imge11.webp" alt="">
+                                        <h4>#javascrip</h4>
+                                    </a>
                                 </div>
                                 <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
+                                    <a class="list-item w-100" href="#">
+                                        <img class="img-fluid w-100" src="./img/imge12.webp" alt="">
+                                        <h4>#java</h4>
+                                    </a>
                                 </div>
                                 <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
+                                    <a class="list-item w-100" href="#">
+                                        <img class="img-fluid w-100" src="./img/imge13.webp" alt="">
+                                        <h4>#reactjs</h4>
+                                    </a>
                                 </div>
                                 <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
+                                    <a class="list-item w-100" href="#">
+                                        <img class="img-fluid w-100" src="./img/imge14.webp" alt="">
+                                        <h4>#html</h4>
+                                    </a>
                                 </div>
                                 <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
+                                    <a class="list-item w-100" href="#">
+                                        <img class="img-fluid w-100" src="./img/imge15.webp" alt="">
+                                        <h4>#vuejs</h4>
+                                    </a>
                                 </div>
                                 <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
-                                </div>
-                            </div>
-                            <a href="#" class="button w-100">Xem tất cả</a>
-                        </div>
-                        <a href="#" class="d-block my-5">
-                            <img src="./img/youtube.webp" alt="youtube" class="rounded w-100">
-                        </a>
-                        <a href="#" class="d-block my-5">
-                            <img src="./img/facebook_bvj95a.webp" alt="youtube" class="rounded w-100">
-                        </a>
-                        <div class="siderbar__news">
-                            <h3 class="font-weight-bold text-white px-3 py-2 rounded text-uppercase"># Khóa học VIDEO</h3>
-                            <div class="row">
-                                <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
-                                </div>
-                                <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
-                                </div>
-                                <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
-                                </div>
-                                <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
-                                </div>
-                                <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
-                                </div>
-                                <div class="col-4">
-                                    <a href="#" class="d-flex flex-column align-items-center">
-                                        <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
-                                        <h4 class="font-weight-normal">#javascript</h4>
-                                    </a>    
+                                    <a class="list-item w-100" href="#">
+                                        <img class="img-fluid w-100" src="./img/imge16.webp" alt="">
+                                        <h4>#nodejs</h4>
+                                    </a>
                                 </div>
                             </div>
-                            <a href="#" class="button w-100">Xem tất cả</a>
                         </div>
+                        <a class="trendRight-button" href="#">
+                            <button>Xem tất cả</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-    </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="row trend-cources mt-5">
+                    <div class="col-md-6 col-sm-12 mt-3">
+                        <div class="trend-cources__item position-relative">
+                            <div>
+                                <a href="#" class="b-block">
 
+                                    <img src="./img/course1.webp" class="rounded w-100" alt="course1">
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="text-uppercase font-weight-bold">
+                                    <a href="#">Java cơ bản cho người mới bắt đầu</a>
+                                </h3>
+                                <ul class="list-group-flush  trend-cources__list-group">
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="w-100 button">Xem chi tiết khóa học</a>
+                            </div>
+                            <div class="position-absolute">
+                                <span class="text-uppercase font-weight-bold text-white">Mới</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mt-3">
+                        <div class="trend-cources__item position-relative">
+                            <div>
+                                <a href="#" class="b-block">
+                                    <img src="./img/course1.webp" class="rounded w-100" alt="course1">
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="text-uppercase font-weight-bold">
+                                    <a href="#">Java cơ bản cho người mới bắt đầu</a>
+                                </h3>
+                                <ul class="list-group-flush  trend-cources__list-group">
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                    <li
+                                        class=" trend-cources__list-group-item bg-transparent pl-0 pr-0 font-weight-lighter">
+                                        <a href="#">Chương 1: Giới thiệu Java</a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="w-100 button">Xem chi tiết khóa học</a>
+                            </div>
+                            <div class="position-absolute">
+                                <span class="text-uppercase font-weight-bold text-white">Mới</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row trend-question mt-5">
+                    <div class="col-12">
+                        <h3 class="font-weight-bold">Câu hỏi phỏng vấn</h3>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-3">
+                        <div class="trend-question__item">
+                            <div>
+                                <a href="#" class="d-block">
+                                    <img src="./img/javascript.webp" alt="javascript" class="w-100">
+                                </a>
+                            </div>
+                            <div>
+                                <h3>
+                                    <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
+                                </h3>
+                                <h4 class="font-weight-lighter">
+                                    <a href="#">
+                                        Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
+                                    </a>
+                                </h4>
+                                <a href="#" class="button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-3">
+                        <div class="trend-question__item">
+                            <div>
+                                <a href="#" class="d-block">
+                                    <img src="./img/javascript.webp" alt="javascript" class="w-100">
+                                </a>
+                            </div>
+                            <div>
+                                <h3>
+                                    <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
+                                </h3>
+                                <h4 class="font-weight-lighter">
+                                    <a href="#">
+                                        Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
+                                    </a>
+                                </h4>
+                                <a href="#" class="button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-3">
+                        <div class="trend-question__item">
+                            <div>
+                                <a href="#" class="d-block">
+                                    <img src="./img/javascript.webp" alt="javascript" class="w-100">
+                                </a>
+                            </div>
+                            <div>
+                                <h3>
+                                    <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
+                                </h3>
+                                <h4 class="font-weight-lighter">
+                                    <a href="#">
+                                        Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
+                                    </a>
+                                </h4>
+                                <a href="#" class="button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-3">
+                        <div class="trend-question__item">
+                            <div>
+                                <a href="#" class="d-block">
+                                    <img src="./img/javascript.webp" alt="javascript" class="w-100">
+                                </a>
+                            </div>
+                            <div>
+                                <h3>
+                                    <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
+                                </h3>
+                                <h4 class="font-weight-lighter">
+                                    <a href="#">
+                                        Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
+                                    </a>
+                                </h4>
+                                <a href="#" class="button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-3">
+                        <div class="trend-question__item">
+                            <div>
+                                <a href="#" class="d-block">
+                                    <img src="./img/javascript.webp" alt="javascript" class="w-100">
+                                </a>
+                            </div>
+                            <div>
+                                <h3>
+                                    <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
+                                </h3>
+                                <h4 class="font-weight-lighter">
+                                    <a href="#">
+                                        Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
+                                    </a>
+                                </h4>
+                                <a href="#" class="button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-3">
+                        <div class="trend-question__item">
+                            <div>
+                                <a href="#" class="d-block">
+                                    <img src="./img/javascript.webp" alt="javascript" class="w-100">
+                                </a>
+                            </div>
+                            <div>
+                                <h3>
+                                    <a href="#">Bộ câu hỏi phỏng vấn Javascript phần 1</a>
+                                </h3>
+                                <h4 class="font-weight-lighter">
+                                    <a href="#">
+                                        Tuyển tập các câu hỏi phỏng vấn phổ biến, cực hay Javascript...
+                                    </a>
+                                </h4>
+                                <a href="#" class="button">Xem chi tiết</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row trend-quotes">
+                    <div class="col-md-12 d-none d-sm-none	d-md-none d-lg-block mt-5 mb-5">
+                        <div class="trend-quotes-item position-relative">
+                            <h3 class="font-weight-lighter">
+                                Nơi công nghệ giúp bạn có một cuộc sống tốt đẹp hơn. Sứ mệnh của TechMely là giúp
+                                bạn điều
+                                đó.
+                            </h3>
+                            <h4 class="font-weight-lighter">-- Tech Mely Team --</h4>
+                            <div class="position-absolute quotes-item1"><img class="w-100" src="./img/download.svg"
+                                    alt="quote">
+                            </div>
+                            <div class="position-absolute quotes-item2"><img class="w-100" src="./img/download1.svg"
+                                    alt="quote"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row trend-discover my-3">
+                    <div class="col-12">
+                        <div class="trend-discover__item">
+                            <h3 class="font-weight-bold text-white">Khám phá tin công nghệ mới nhất</h3>
+                            <h4 class="font-weight-lighter text-white">Bạn muốn là người nắm bắt được các bản tin về
+                                công
+                                nghệ, lập trình nhanh nhất? Hãy đăng ký ngay để cập nhật những case study và xu
+                                hướng thiết
+                                kế mới nhất!</h4>
+                            <div class="d-flex">
+                                <input type="text" placeholder="Nhập email của bạn...">
+                                <a href="#" class="button btn--send text-white font-weight-normal d-flex">Gửi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12">
+                <div class="siderbar">
+                    <div class="siderbar__interview">
+                        <img class="w-100 rounded" src="./img/interview.webp" alt="interview">
+                        <h3 class="font-weight-bold">Chủ đề</h3>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="button w-100">Xem tất cả</a>
+                    </div>
+                    <a href="#" class="d-block my-5">
+                        <img src="./img/youtube.webp" alt="youtube" class="rounded w-100">
+                    </a>
+                    <a href="#" class="d-block my-5">
+                        <img src="./img/facebook_bvj95a.webp" alt="youtube" class="rounded w-100">
+                    </a>
+                    <div class="siderbar__news">
+                        <h3 class="font-weight-bold text-white px-3 py-2 rounded text-uppercase"># Khóa học VIDEO</h3>
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="#" class="d-flex flex-column align-items-center">
+                                    <img class="w-100" src="./img/javascript_interview.webp" alt="javascript_interview">
+                                    <h4 class="font-weight-normal">#javascript</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="#" class="button w-100">Xem tất cả</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="">
         <div class="container">
             <div class="row mt-3 mb-5">
                 <div class="col-md-4 col-sm-12">
-                    <p class="footer__slogan font-weight-lighter">Nếu bạn theo đuổi công nghệ, thế giới sẽ theo đuổi bạn</p>
+                    <p class="footer__slogan font-weight-lighter">Nếu bạn theo đuổi công nghệ, thế giới sẽ theo đuổi bạn
+                    </p>
                 </div>
                 <div class="col-md-2 col-sm-12">
                     <ul class="font-weight-lighter">
@@ -702,7 +1172,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center font-weight-lighter mb-3">
-                    <span >© 2021 Copyright</span>
+                    <span>© 2021 Copyright</span>
                 </div>
             </div>
         </div>
@@ -717,6 +1187,8 @@
 
     <script src="./jquery/jquery.js"></script>
     <script src="./BS4/bootstrap.bundle.min.js"></script>
+    <!-- MainJS -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -35,5 +35,3 @@ let navItemDropTNELE = document.getElementById("navItemDropMenuTN");
 navItemDropTNELE.addEventListener("click", function () {
     document.getElementById("buttonDropMenuTN").classList.toggle("changeButton");
 });
-// Blog Moblie
-const blogCard = document.querySelector(".blogNews-cardMB");
