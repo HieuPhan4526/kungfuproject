@@ -21,11 +21,11 @@ taiNguyenDropELE.addEventListener("mouseleave", function () {
 
 let showNavELE = document.getElementById("showNavReponsive");
 showNavELE.addEventListener("click", function () {
-    document.getElementById("navReponsive").classList.add("openDrop");
+    document.getElementById("navReponsive").classList.add("openMenuRes");
 });
 let closeNavELE = document.getElementById("closeNavRes");
 closeNavELE.addEventListener("click", function () {
-    document.getElementById("navReponsive").classList.remove("openDrop");
+    document.getElementById("navReponsive").classList.remove("openMenuRes");
 });
 let navItemDropELE = document.getElementById("navItemDropMenu");
 navItemDropELE.addEventListener("click", function () {
