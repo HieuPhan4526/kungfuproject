@@ -3,15 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
-a{
+a {
     color: black;
-    display: inline-block
+    display: inline-block;
 }
 a:hover {
     text-decoration: none;
     color: #2c7a7b !important;
 }
-button{
+button,
+.button {
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
@@ -53,20 +54,20 @@ button:hover,
     color: #2c7a7b;
     font-size: 14px;
 }
-.carousel-control-next-icon, .carousel-control-prev-icon{
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     flex: none;
     padding: 20px;
 }
-.carousel-control-prev, 
-.carousel-control-next{
- flex: none;
- width: 5%;
+.carousel-control-prev,
+.carousel-control-next {
+    flex: none;
+    width: 5%;
 }
-.carousel-control-prev:hover, 
-.carousel-control-next:hover{
- background-color: transparent;
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: transparent;
 }
-
 
 /* Header */
 header {
@@ -93,64 +94,64 @@ header {
     color: black;
     transition: all 0.5s;
 }
-.navItem-dropdown{
+.navItem-dropdown {
     position: absolute;
     background-color: white;
     left: 47%;
     display: none;
 }
-.navItem-dropdownContent{
+.navItem-dropdownContent {
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
-.navItem-dropdownContent a{
+.navItem-dropdownContent a {
     border-bottom: 0.5px solid lightgray;
     margin-bottom: 20px;
 }
- .item{
+.item {
     display: flex;
     align-items: center;
 }
-.item img{
+.item img {
     border-radius: 18px;
     border: 1px solid #d1d5db;
     margin-right: 10px;
     width: 35px;
     height: 35px;
 }
-.item-content h3{
+.item-content h3 {
     font-size: 1rem;
     font-weight: bold;
     color: #374151;
     margin: 0;
 }
-.item-content h4{
-    font-size: .875rem;
+.item-content h4 {
+    font-size: 0.875rem;
     color: darkgray;
     margin-top: 10px;
 }
 
-.navItem-dropdownTN{
+.navItem-dropdownTN {
     position: absolute;
     left: 43%;
     display: none;
 }
-.navItemContent-dropdownTN{
+.navItemContent-dropdownTN {
     display: flex;
 }
-.firstContent{
+.firstContent {
     background-color: #f6f9fc;
     display: flex;
     flex-direction: column;
 }
-.secondContent{
+.secondContent {
     background-color: white;
     display: flex;
     flex-direction: column;
 }
 .firstContent a h3,
-.secondContent a h3{
+.secondContent a h3 {
     text-transform: uppercase;
     font-size: 1rem;
     color: #374151;
@@ -159,27 +160,28 @@ header {
     border-bottom: 1px solid lightgray;
     margin-bottom: 20px;
 }
-.firstContent, .secondContent{
+.firstContent,
+.secondContent {
     padding: 30px;
 }
-.firstContent .text-button , 
+.firstContent .text-button,
 .secondContent .text-button {
     text-align: center;
 }
 
-.openDrop{
+.openDrop {
     display: block !important;
 }
 
-#navReponsive{
+#navReponsive {
     display: none;
 }
 
 /* Carousel */
-.carousel-control-prev, 
-.carousel-control-next{
- flex: none;
- width: 1%;
+.carousel-control-prev,
+.carousel-control-next {
+    flex: none;
+    width: 1%;
 }
 
 .carouselItem-content {
@@ -212,7 +214,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     transform: scale3d(1.1, 1.2, 1);
 }
-.carousel-body{
+.carousel-body {
     height: 100vh;
 }
 .carouselBody-inner {
@@ -221,19 +223,19 @@ header {
     overflow: hidden;
     height: 100%;
 }
-.carouselBody-item{
+.carouselBody-item {
     height: 100%;
     width: 100%;
 }
-.carouselBody-item img{
+.carouselBody-item img {
     height: 100%;
 }
 
 /* Blog */
-.blog{
+.blog {
     margin: 50px 0;
 }
-.blogNews-title{
+.blogNews-title {
     display: block;
     font-size: 28px;
     line-height: 2rem;
@@ -241,10 +243,9 @@ header {
     margin-top: 0;
     color: #1f2937;
     font-weight: bold;
-    margin: 5px 0
-
+    font-size: 26px;
 }
-.blogNews-description{
+.blogNews-description {
     font-size: 15px;
     color: #4b5563;
     margin-top: 9px;
@@ -261,7 +262,7 @@ header {
     color: black;
     font-weight: bold;
 }
-.text-item p{
+.text-item p {
     font-size: 14px;
     color: #6b7280;
     margin-top: 7px;
@@ -271,7 +272,7 @@ header {
 .common-new {
     margin-top: 50px;
 }
-.common-title{
+.common-title {
     font-size: 15px;
     color: black;
     margin-top: 15px;
@@ -279,7 +280,7 @@ header {
     min-height: 64px;
     display: block;
 }
-.common-newCard p{
+.common-newCard p {
     font-size: 13px;
     color: darkgray;
     margin-top: 15px;
@@ -300,29 +301,28 @@ header {
     align-items: center;
     gap: 25px;
     margin-bottom: 20px;
-
 }
 
-.charts-trend a p{
+.charts-trend a p {
     font-size: 12px;
     color: #4b5563;
 }
-.charts-trend a p:first-child{
+.charts-trend a p:first-child {
     color: #4b5563;
     font-size: 12px;
 }
 
-.list-item h4{
+.list-item h4 {
     font-size: 13px;
     text-align: center;
     margin-top: 10px;
     color: #374151;
 }
-.trendRight-content h3{
+.trendRight-content h3 {
     font-size: 1.125rem;
     font-weight: 700;
 }
-.charts-trend a:hover p{
+.charts-trend a:hover p {
     color: #2c7a7b !important;
 }
 
@@ -530,6 +530,4 @@ footer ul {
 
 .icon__list li {
     margin: 0 6px;
-}
-
 }
