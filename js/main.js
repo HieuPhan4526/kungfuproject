@@ -35,3 +35,10 @@ let navItemDropTNELE = document.getElementById("navItemDropMenuTN");
 navItemDropTNELE.addEventListener("click", function () {
     document.getElementById("buttonDropMenuTN").classList.toggle("changeButton");
 });
+
+let logoVNELE = document.querySelector(".logo-VN").addEventListener("click", function () {
+    document.querySelector(".logo-content").classList.toggle("change");
+});
+let logoVNResELE = document.querySelector(".logoVn-Res").addEventListener("click", function () {
+    document.querySelector(".logoVnRes-content").classList.toggle("openMenuRes");
+});
