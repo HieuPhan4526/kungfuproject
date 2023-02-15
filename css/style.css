@@ -711,10 +711,12 @@ footer ul {
     .blogNews-title h3 {
         min-height: 40px;
     }
+
     .common-newCard .common-title h3 {
         color: #1f2937;
         letter-spacing: normal;
-        font-size: 28px;
+        font-size: 20px;
+        height: 60px;
     }
     .common-newCard a {
         display: block;
