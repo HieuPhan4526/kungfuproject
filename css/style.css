@@ -242,7 +242,7 @@ header {
     transform: scale3d(1.1, 1.2, 1);
 }
 .carousel-body {
-    height: 100vh;
+    height: 70vh;
 }
 .carouselBody-inner {
     position: relative;
@@ -676,11 +676,20 @@ footer ul {
         cursor: pointer;
     }
     /* Carousel */
+    .carouselItem-content h2{
+        font-size: 40px;
+    }
+    .carouselItem-content p{
+        margin: 30px 0;
+    }
 }
 @media only screen and (max-width: 778px) {
     /* Carousel */
-    .carouselItem-content h2 {
-        font-size: 40px;
+    .carouselItem-content h2{
+        font-size: 30px;
+    }
+    .carouselItem-content p{
+        margin: 30px 0;
     }
     .carousel-control-prev, .carousel-control-next {
         display: none;
